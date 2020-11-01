@@ -22,7 +22,7 @@ Configurate the parameter **checkpoint_q_table** of **test_and_illustrate.py** t
 ## Reuslts
 * Success rate @ 200 steps
 
-For the provided data/q_table_02lr.npy q-table, 100000 of 100000 times can the model persist over 200 steps.
+For the provided q-table (data/q_table_02lr.npy), 100000 of 100000 times can the model persist over 200 steps.
 
 * How long can it survive in one episode?
 
