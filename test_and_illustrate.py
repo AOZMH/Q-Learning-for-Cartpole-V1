@@ -26,7 +26,7 @@ def print_one_episode(params):
             action = model.decide_action(observation, train_mode=False)     # e-greedy policy
             new_observation, reward, done, info = env.step(action)  # take action
         except Warning:
-            print("Warning cached!")
+            print("Warning catched!")
             break
         # update observation
         observation = new_observation
