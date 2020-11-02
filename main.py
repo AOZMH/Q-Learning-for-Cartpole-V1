@@ -71,6 +71,10 @@ def run(params):
                     best_suc_rate = succeeded_trials / params['num_trials']
                     model.save_q_table(params['checkpoint_q_table'].replace('.npy', ''))
                 print('Best success rate: {}.'.format(best_suc_rate))
+
+                if best_suc_rate >= 0.999:
+                    print('Finished training')
+                    exit(0)
     
     # evaluating
     elif params['train_or_eval'] == 'eval':

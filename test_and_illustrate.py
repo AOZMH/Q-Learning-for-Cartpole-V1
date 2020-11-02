@@ -25,8 +25,11 @@ def print_one_episode(params):
             env.render()    # print process to screen
             action = model.decide_action(observation, train_mode=False)     # e-greedy policy
             new_observation, reward, done, info = env.step(action)  # take action
+            if params['end_at_200'] and done:
+                break
         except Warning:
             print("Warning catched!")
+            step_ix -= 1
             break
         # update observation
         observation = new_observation
@@ -43,6 +46,7 @@ if __name__ == "__main__":
         'cart_v_num': 8,
         'pole_angle_num': 8,
         'pole_v_num': 8,
-        'checkpoint_q_table': './data/q_table_02lr.npy'
+        'checkpoint_q_table': './data/q_table_02lr.npy',
+        'end_at_200': True,
     }
     print_one_episode(params)

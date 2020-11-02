@@ -4,13 +4,13 @@ Naive implementation of q-learning on Carpole-v1 in openai-gym
 ## Execution
 * Training
 
-Configurate the value of parameter **test_or_eval** at the bottom of **main.py** to **'train'**, set up other hyper-parameters.
+Configurate the value of parameter **train_or_eval** at the bottom of **main.py** to **'train'**, set up other hyper-parameters.
 > python main.py
 
 * Evaluating
 
 To test the rate at which the model can survive no less than 200 steps.
-Configurate the value of parameter **test_or_eval** of **main.py** to **'eval'**, change **checkpoint_q_table** to the route of the well-trained q-table to be evaluated, set **num_trials** to the number of runs when evaluating the model.
+Configurate the value of parameter **train_or_eval** of **main.py** to **'eval'**, change **checkpoint_q_table** to the route of the well-trained q-table to be evaluated, set **num_trials** to the number of runs when evaluating the model.
 > python main.py
 
 * Illustrating
