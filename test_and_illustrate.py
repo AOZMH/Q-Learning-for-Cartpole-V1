@@ -47,6 +47,6 @@ if __name__ == "__main__":
         'pole_angle_num': 8,
         'pole_v_num': 8,
         'checkpoint_q_table': './data/q_table_02lr.npy',
-        'end_at_200': True,
+        'end_at_200': False,
     }
     print_one_episode(params)
